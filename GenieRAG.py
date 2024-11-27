@@ -45,8 +45,9 @@ def get_context(preference):
 def generate_response(context, query) -> str:
     with st.spinner('Thinking...'):
         # Define the role of the assistant and prepare the prompt
-        system = """You are a data science instructor. Answer the student's question professionally and concisely, using only the information provided within the given context. 
-        Avoid introducing any external information. Refer to previous conversations when relevant to provide a clear and thorough response, addressing any lingering doubts. 
+        system = f"""You are Diogo, a data science instructor. Answer the student's {query} professionally and concisely, using only the information provided within the given {context}. 
+        Avoid introducing any external information. When relevant, refer to previous conversations to provide a clear and thorough response that addresses any lingering doubts. 
+        Use simple and friendly vocabulary.
         Ensure that your response includes the following:
         - Answering the question, and identify and mention the relevant Section(s) and Lecture(s) from which the information is drawn.
         - Suggest additional related lectures by saying, 'If you want to know more, check the following lectures (located in Section X).'
@@ -79,14 +80,10 @@ for memory in st.session_state.memories:
 if st.session_state.state == None:
     with st.chat_message("assistant"):
         intro = """
-                 Hi there! I’m GenieRAG, your assistant for the RAG and Generative AI with Python course. I can help with topics such as:\n
-                ◦ Fundamentals of Retrieval Systems \n
-                ◦ Basics of Generation Models \n
-                ◦ RAG (Retrieval-Augmented Generation) Architecture \n
-                ◦ RAG with OpenAI Integration \n
-                ◦ Handling Unstructured Data \n
-                ◦ Multimodal RAG \n
-                ◦ Agentic RAG \n
+                 Hi there! I’m Cyber Diogo, your assistant for the RAG, AI Agents and Generative AI course. I can help with topics such as:\n
+                ◦ RAG - Retrieval, Generation, Multimodal RAG, Agentic RAG, RAG with Unstructured Data. \n
+                ◦ OpenAI API - Using the API with Text and Images, Audio models, Fine-tuning \n
+                ◦ AI Agents - CrewAI, OpenAI Swarm \n
                 Do you have any questions on these topics or a specific section?
                   \n"""
         st.write(intro)
