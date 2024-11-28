@@ -45,7 +45,7 @@ def get_context(preference):
 def generate_response(context, query) -> str:
     with st.spinner('Thinking...'):
         # Define the role of the assistant and prepare the prompt
-        system = """You are a data science instructor. Answer the student's question professionally and concisely, using only the information provided within the given context. 
+        system = f"""You are a data science instructor. Answer the student's question {query} professionally and concisely, using only the information provided within the given {context}. 
         Avoid introducing any external information. Refer to previous conversations when relevant to provide a clear and thorough response, addressing any lingering doubts. 
         Ensure that your response includes the following:
         - Answering the question, and identify and mention the relevant Section(s) and Lecture(s) from which the information is drawn.
