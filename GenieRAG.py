@@ -24,7 +24,7 @@ os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 st.set_page_config(page_title="Q&A", page_icon="🤖")
 
 # webapp title
-st.title('GenieRAG, the RAG and Gen AI Course Assistant')
+st.title('Cyber Diogo, the RAG, AI Agents and Gen AI Course Assistant')
 
 # Vector DB
 embeddings = OpenAIEmbeddings()
