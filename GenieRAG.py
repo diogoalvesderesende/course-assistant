@@ -79,7 +79,7 @@ for memory in st.session_state.memories:
 if st.session_state.state == None:
     with st.chat_message("assistant"):
         intro = """
-                 Hi there! I’m GenieRAG, your assistant for the RAG and Generative AI with Python course. I can help with topics such as:\n
+                 Hi there! I’m Cyber Diogo, your assistant for the RAG, AI Agents and Generative AI with Python course. I can help with topics such as:\n
                 ◦ RAG: Fundamentals, Unstructured Data, Multimodal, Agentic \n
                 ◦ AI Agents: OpenAI Swarm, CrewAI \n
                 ◦ OpenAI API: Text and Images, Whisper, Embeddings, Fine Tuning. \n
