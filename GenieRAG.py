@@ -80,13 +80,10 @@ if st.session_state.state == None:
     with st.chat_message("assistant"):
         intro = """
                  Hi there! I’m GenieRAG, your assistant for the RAG and Generative AI with Python course. I can help with topics such as:\n
-                ◦ Fundamentals of Retrieval Systems \n
-                ◦ Basics of Generation Models \n
-                ◦ RAG (Retrieval-Augmented Generation) Architecture \n
-                ◦ RAG with OpenAI Integration \n
-                ◦ Handling Unstructured Data \n
-                ◦ Multimodal RAG \n
-                ◦ Agentic RAG \n
+                ◦ RAG: Fundamentals, Unstructured Data, Multimodal, Agentic \n
+                ◦ AI Agents: OpenAI Swarm, CrewAI \n
+                ◦ OpenAI API: Text and Images, Whisper, Embeddings, Fine Tuning. \n
+
                 Do you have any questions on these topics or a specific section?
                   \n"""
         st.write(intro)
